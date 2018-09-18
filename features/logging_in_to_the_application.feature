@@ -7,12 +7,12 @@ I would like to login to my account
 
 Background:
 Given the following user exists
-|email|password|
-|faraz@craftacademy.se|mypassword|
+|email|password|name|
+|faraz@craftacademy.se|mypassword|Faraz|
 
 Scenario:
 Given I am on the landing page
-When I click on the link "login"
+When I click on the link "Login"
 And I fill in the "Email" with "faraz@craftacademy.se"
 And I fill in the "Password" with "mypassword"
 When I click on the link "Log in"
