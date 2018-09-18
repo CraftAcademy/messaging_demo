@@ -5,12 +5,15 @@ Feature: Login
 
 Background:
 Given the following user exist
-|email|password|
-|faraz@craftacademy.se|mypassword|
+|email|password|name|
+|faraz@craftacademy.se|mypassword|Faraz|
 
 Scenario: Login
 Given I am on the landinng page
-When I click on the link "Loogin"
+When I click on the link "Login"
 And I fill in the "Email" with "faraz@craftacademy.se"
 And I fill in the "Password" with "mypassword"
+When I click on the link "Log in"
+Then I should be on root page
+And I should see message "Signed in successfully."
 
