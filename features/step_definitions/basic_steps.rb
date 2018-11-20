@@ -1,29 +1,30 @@
 Given("I am on the landing page") do
-    pending # Write code here that turns the phrase above into concrete actions
+  visit '/'
   end
   
-  When("i click on the link {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  When("i click on the link {string}") do |login|
+    click_on(login)
   end
   
-  When("I fill in {string} with {string}") do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+  When("I fill in {string} with {string}") do |a, b|
+    fill_in(a, :with => b)
   end
   
-  When("I click the link {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  When("I click the link {string}") do |button|
+    click_button button
   end
 
   Then("I should be on the root page") do
-    pending # Write code here that turns the phrase above into concrete actions
+    
   end
   
-  Then("I should see message {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("I should see message {string}") do |content|
+    expect(page).to have_content content
   end
 
   Given("the following user exist") do |table|
-    # table is a Cucumber::MultilineArgument::DataTable
-    pending # Write code here that turns the phrase above into concrete actions
+    table.hashes.each do |user|
+      User.create(user)
+  end
   end
   
