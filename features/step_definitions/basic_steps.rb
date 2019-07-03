@@ -12,16 +12,19 @@ When("I click on {string}") do |login|
   click_on(login)
 end
 
-When("I fill in {string} field with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I fill in {string} field with {string}") do |email, myEmail|
+  fill_in(
+    'Email', :with => myEmail)
 end
 
-When("I fill in the {string} field with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I fill in the {string} field with {string}") do |password, paSsword|
+  fill_in(
+    'Password', :with => paSsword
+  )
 end
 
-Then("I click on the {string} button") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I click on the {string} button") do |element|
+  click_on element
 end
 
 Then("I should see {string}") do |string|

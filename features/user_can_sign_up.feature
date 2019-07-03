@@ -13,5 +13,5 @@ Feature: User can login
     When I click on 'Login'
     And I fill in 'email' field with 'oliver@craft.se'
     And I fill in the 'password' field with 'password'
-    Then I click on the 'Log In' button
+    Then I click on the 'Log in' button
     Then I should see 'You have been successfully authenticated'
